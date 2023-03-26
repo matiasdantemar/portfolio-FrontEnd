@@ -1,0 +1,98 @@
+article {
+  height: 85%;
+}
+
+section {
+  height: 100%;
+}
+
+.div-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 52px;
+}
+
+.p-title {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.button-edit {
+  border: none;
+  font-size: 20px;
+  background: none;
+  /* display: none; */
+}
+
+.icon-edit {
+  width: 3vh;
+  color: rgb(0,163,255);
+}
+
+.contenido2 {
+  height: 63vh;
+}
+
+.col-card {
+  padding: 15px 51px 15px 0px;
+}
+
+.btn-edit {
+  float: right;
+}
+
+.div-image {
+  text-align: center;
+}
+
+.image-experiencia2 {
+  max-width: 12vw;
+  border-radius: 10px 10px 10px 10px;
+  -moz-border-radius: 10px 10px 10px 10px;
+}
+
+.div-text {
+  display: inline-block;
+  margin: 0px 0px 0px 20px;
+}
+
+.p-anidado{
+  margin: 0px 0px 10px 0px;
+  color: #ffffff;
+}
+
+@media (min-width: 992px) {
+  .image-experiencia2 {
+    float: left;
+    max-width: 5vw;
+  }
+}
+@media (min-width: 1200px) {
+  .col-proyectos.col-card {
+    margin-right: 39.5px;
+    padding: initial;
+  }
+}
+
+
+
+
+
+   
+
+    
+
+  
+
+
+
+    
+  
+  
+
+
+
+
+  
+  

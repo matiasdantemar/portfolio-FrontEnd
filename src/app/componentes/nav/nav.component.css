@@ -1,0 +1,14 @@
+header {
+    height: 15%;
+  }
+  
+.image-nav {
+    width: 21vh;
+    margin-top: 15px;
+}
+
+@media (min-width: 768px) {
+    .image-nav {
+    width: 13vh;    
+    }
+}  

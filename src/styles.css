@@ -1,0 +1,170 @@
+@import url('assets/css/normalize.css');
+
+@font-face {
+    font-family: "Heebo";
+    src: url("assets/fonts/Heebo.woff2") format("opentype");
+}
+
+* {
+  font-family: 'Heebo';
+}
+
+.background {
+  height: 100%;
+}
+
+@media (min-width: 768px) {
+  .background {
+    height: 100%;
+    background-image: url("assets/img/background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow: hidden;
+  }
+}
+
+.principal-card {
+  background-color: #000000;
+  background-image: url("assets/img/background-responsive.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  background-position: center;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .principal-card {
+    background-color: #000000;
+    background-image: url("assets/img/gif-card-video-terminado.gif");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 78%;
+    width: 78%;
+    box-sizing: border-box;
+    position: relative;
+    top: 13%;
+    left: 13%;
+  }
+}
+
+header {
+  height: 15%;
+}
+
+.image-nav {
+  width: 21vh;
+  margin-top: 15px;
+}
+
+@media (min-width: 768px) {
+  .image-nav {
+    width: 13vh;
+  }
+}
+
+@media (min-width: 820px) {
+  .a-link {
+    margin: 0px 5px 0px 5px;
+  }
+}
+
+article {
+  height: 85%;
+}
+
+section {
+  height: 100%;
+}
+
+.contenido {
+  height: 86vh;
+}
+
+@media (min-width: 768px) {
+  .order-1 {
+    align-self: center;
+  }
+}
+
+.image-social {
+  display: block;
+  width: 25px;
+  margin: 12px 0px 29px 30px;
+}
+
+.p-scroll {
+  position: absolute;
+  bottom: 4%;
+  right: 0%;
+  font-size: 0.9em;
+  opacity: 1;
+  color: #ffffff;
+  transform: rotate(90deg);
+  animation: mover 1.5s ease infinite;
+}
+
+@keyframes mover {
+  0% {
+    bottom: 5%;
+  }
+  100% {
+    bottom: 4%;
+  }
+}
+
+.p-number-page {
+  position: absolute;
+  bottom: 0%;
+  left: 2%;
+  color: #ffffff;
+  font-size: 4em;
+  text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+  .p-number-page {
+    font-size: 5em;
+  }
+}
+
+@media (min-width: 992px) {
+  .p-number-page {
+    font-size: 6em;
+  }
+}
+
+@media (min-width: 1400px) {
+  .p-number-page {
+    bottom: 0%;
+    font-size: 7em;
+    left: 3%;
+  }
+}
+
+.img-social {
+  position: absolute;
+  bottom: 32%;
+  left: 2%;
+  color: #ffffff;
+  font-size: 4em;
+  text-decoration: underline;
+}
+
+.overflow-auto::-webkit-scrollbar {
+  background-color: transparent;
+}
+
+.overflow-auto::-webkit-scrollbar-thumb {
+  background-color: #626262;
+  border-radius: 10px;
+}
+
+.overflow-auto::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555252;
+}

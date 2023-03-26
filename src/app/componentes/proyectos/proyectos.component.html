@@ -1,0 +1,21 @@
+<article>
+    <section>
+        <div class="text-white div-title">
+            <h1 class="p-title">Proyectos</h1><button class="button-edit" type="button"><i class="fa fa-plus icon-edit"></i></button>
+        </div>
+        <div class="overflow-auto container-fluid">
+            <div class="row contenido2 justify-content-end" >
+                <div *ngFor="let proyectos of proyectosList" class="col-10 col-md-5 col-xl-3 col-proyectos col-card">
+                    <div class="btn-edit"><button class="button-edit" type="button"><i class="fas fa-pencil-alt icon-edit"></i></button></div>
+                    <div class="card card-1" [style.background-color]="proyectos.color">
+                        <div class="card-body">
+                            <div class="container-proyectos d-flex justify-content-center align-items-center">
+                                <h4 class="text-white text-card">{{proyectos.nombre}}</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</article>

@@ -43,7 +43,7 @@ export class EditEducacionComponent implements OnInit{
     const pElement = document.getElementById('numero');
     pElement.innerHTML = this.numero.toString();
     const miEnlace = document.getElementById("enlace") as HTMLAnchorElement;
-    miEnlace.setAttribute("href", "https://matias-portafolio.onrender.com/skills");
+    miEnlace.setAttribute("href", "https://matias-portafolio.web.app/skills");
   }
 
   onUpdate(): void{ //actualiza la experiencia en la base de datos cuando se envía el formulario

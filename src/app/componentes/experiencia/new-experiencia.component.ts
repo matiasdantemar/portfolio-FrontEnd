@@ -38,7 +38,7 @@ export class NewExperienciaComponent implements OnInit {
     const pElement = document.getElementById('numero');
     pElement.innerHTML = this.numero.toString();
     const miEnlace = document.getElementById("enlace") as HTMLAnchorElement;
-    miEnlace.setAttribute("href", "https://matias-portafolio.onrender.com/educacion");
+    miEnlace.setAttribute("href", "https://matias-portafolio.web.app/educacion");
   }
 
   onCreate(): void {

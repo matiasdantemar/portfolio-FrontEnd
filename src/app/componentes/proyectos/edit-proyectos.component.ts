@@ -23,7 +23,7 @@ export class EditProyectosComponent {
         this.appComponent.add('danger', 'Error al modificar proyecto');
         this.router.navigate(['/proyectos']);
         const miEnlace = document.getElementById("enlace") as HTMLAnchorElement;
-        miEnlace.setAttribute("href", "https://matias-portafolio.onrender.com/login");
+        miEnlace.setAttribute("href", "https://matias-portafolio.web.app/login");
       }
     )
     const pElement = document.getElementById('numero');

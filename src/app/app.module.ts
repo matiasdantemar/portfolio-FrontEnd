@@ -25,9 +25,7 @@ import { FormsModule } from '@angular/forms';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
-import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
-import { environment } from '../environments/environment';
-import { provideStorage, getStorage } from '@angular/fire/storage';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { ImageCropperModule } from 'ngx-image-cropper';
@@ -65,9 +63,6 @@ import { ImageCropperModule } from 'ngx-image-cropper';
     ImageCropperModule,
     NgCircleProgressModule.forRoot({
     }),
-    provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideStorage(() => getStorage()),
-
   ],
 
   bootstrap: [AppComponent]

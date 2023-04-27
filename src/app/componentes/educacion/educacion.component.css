@@ -18,18 +18,6 @@ section {
   margin: 0 auto;
 }
 
-.button-edit {
-  border: none;
-  font-size: 20px;
-  background: none;
-  /* display: none; */
-}
-
-.icon-edit {
-  width: 3vh;
-  color: rgb(0,163,255);
-}
-
 .contenido2 {
   height: 63vh;
 }
@@ -38,18 +26,50 @@ section {
   padding: 15px 51px 15px 0px;
 }
 
-.btn-edit {
+.btn-right {
   float: right;
 }
 
-.div-image {
+.button-delete,
+.button-edit,
+.button-new {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  /* ancho del icono */
+  height: 20px;
+  /* alto del icono */
+  margin-left: 20px;
+  border: none;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.icon-delete,
+.icon-edit,
+.icon-new {
+  font-size: 20px;
+  /* tamaño de la fuente del icono */
+  color: rgb(0, 163, 255);
+}
+
+.icon-edit:hover,
+.icon-delete:hover,
+.icon-new:hover {
+  color: #0077ff;
+}
+
+.div-imagen {
   text-align: center;
 }
 
-.image-experiencia2 {
-  max-width: 12vw;
-  border-radius: 10px 10px 10px 10px;
-  -moz-border-radius: 10px 10px 10px 10px;
+.imagen-educacion {
+  width: 80px; /*borrar linea si utilizoc ngx-image-cropper*/
+  max-width: 80px;
+  max-height: 90px;
+  border-radius: 10px;
 }
 
 .div-text {
@@ -57,42 +77,23 @@ section {
   margin: 0px 0px 0px 20px;
 }
 
-.p-anidado{
+.p-anidado {
   margin: 0px 0px 10px 0px;
   color: #ffffff;
 }
 
+
+
 @media (min-width: 992px) {
-  .image-experiencia2 {
+  .imagen-educacion {
     float: left;
-    max-width: 5vw;
+    max-height: 80px;
   }
 }
+
 @media (min-width: 1200px) {
   .col-proyectos.col-card {
     margin-right: 39.5px;
     padding: initial;
   }
 }
-
-
-
-
-
-   
-
-    
-
-  
-
-
-
-    
-  
-  
-
-
-
-
-  
-  

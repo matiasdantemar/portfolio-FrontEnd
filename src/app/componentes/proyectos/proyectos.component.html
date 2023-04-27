@@ -1,21 +1,37 @@
 <article>
     <section>
         <div class="text-white div-title">
-            <h1 class="p-title">Proyectos</h1><button class="button-edit" type="button"><i class="fa fa-plus icon-edit"></i></button>
+            <h1 class="p-title">Proyectos</h1><button class="button-new" type="button" routerLink="/newproye"
+                *ngIf="isLogged"><i class="fa fa-plus icon-new"></i></button>
         </div>
         <div class="overflow-auto container-fluid">
-            <div class="row contenido2 justify-content-end" >
-                <div *ngFor="let proyectos of proyectosList" class="col-10 col-md-5 col-xl-3 col-proyectos col-card">
-                    <div class="btn-edit"><button class="button-edit" type="button"><i class="fas fa-pencil-alt icon-edit"></i></button></div>
-                    <div class="card card-1" [style.background-color]="proyectos.color">
-                        <div class="card-body">
-                            <div class="container-proyectos d-flex justify-content-center align-items-center">
-                                <h4 class="text-white text-card">{{proyectos.nombre}}</h4>
+            <div class="row contenido2 justify-content-end">
+                <div *ngFor="let Proyecto of proyecto" class="col-10 col-xs-12 col-sm-5 col-md-5 col-xl-3 col-proyectos">
+                    <div class="btn-right">
+                        <button *ngIf="isLogged" class="button-delete" type="button" (click)="openModal(template, Proyecto.id)"><i
+                                class="fas fa-trash icon-delete"></i></button>
+                        <button *ngIf="isLogged" class="button-edit" type="button"
+                            routerLink="/editproye/{{Proyecto.id}}"><i class="fas fa-pencil-alt icon-edit"></i></button>
+                    </div>
+                    <div class="div-card">
+                        <a class="url" [href]="Proyecto.url" target="_blank">
+                            <div class="card" [style.background-color]="Proyecto.color">
+                                <div class="container-proyectos d-flex justify-content-center align-items-center">
+                                    <h4 class="text-white text-card">{{Proyecto.nombre}}</h4>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 </article>
+
+<ng-template #template>
+    <div class="modal-body text-center bg-black text-white border border-white">
+        <p>¿Está seguro que desea eliminar?</p>
+        <button type="button" class="btn btn-danger m-2" (click)="confirm()">Si</button>
+        <button type="button" class="btn btn-primary m-2" (click)="decline()">No</button>
+    </div>
+</ng-template>

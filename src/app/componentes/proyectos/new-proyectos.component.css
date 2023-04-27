@@ -1,0 +1,98 @@
+article {
+    height: 85%;
+}
+
+section {
+    height: 100%;
+}
+
+.contenido {
+    height: 86vh;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+.input-nombre {
+    width: 50%;
+}
+
+.input-color {
+    width: 40%;
+}
+
+.input-enlace {
+    width: 80%;
+}
+
+.btn-agregar,
+.btn-cancelar {
+    margin: 10px 10px 10px 0px;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.div-card {
+    width: 84%;
+    margin: 20px 0px 20px 10px;
+    text-align: center;
+}
+
+.url {
+    text-decoration: none;
+}
+
+.card {
+    height: 22vh;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.container-proyectos {
+    height: 100%;
+    /*max-height: 100%;*/
+}
+
+@media (min-width: 768px) {
+    .contenido {
+        height: 67vh;
+    }
+}
+
+@media (min-width: 768px) {
+    .center {
+        display: block;
+        flex-direction: inherit;
+        align-items: start;
+    }
+}
+
+@media (min-width: 1200px) {
+    .col-proyectos {
+        margin-right: 54px;
+        padding: initial;
+    }
+}
+
+
+.overflow-auto::-webkit-scrollbar {
+    background-color: transparent;
+}
+
+.overflow-auto::-webkit-scrollbar-thumb {
+    background-color: #626262;
+    border-radius: 10px;
+}
+
+.overflow-auto::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555252;
+}

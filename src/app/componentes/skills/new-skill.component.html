@@ -1,0 +1,54 @@
+<article>
+    <section>
+        <div class="overflow-auto container-fluid">
+            <div class="row contenido justify-content-center">
+                <div class="col-8 col-sm-8 col-xxl-9">
+                    <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                        <div class="form-group">
+                            <label for="nombre" class="form-label text-white">Nombre Skill</label>
+                            <input type="text" class="form-control input-nombre" id="nombre" name="nombre" [(ngModel)]="nombre"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="porcentaje" class="form-label text-white">Ingrese el Porcentaje</label>
+                            <input type="number" class="form-control input-porcentaje" id="porcentaje" name="porcentaje"
+                                [(ngModel)]="porcentaje" min="0" max="100" step="1">
+                        </div>
+                        <div class="form-group">
+                            <label for="color" class="form-label text-white">Seleccione el Color</label>
+                            <input type="color" class="form-control input-color" id="color" name="color" [(ngModel)]="color"
+                                required>
+                        </div>
+                        <div class="container-circle">
+                            <div id="container-{{nombre}}" class="div-container">
+                                    <circle-progress
+                                    [percent]="porcentaje"
+                                    [outerStrokeColor]="color"
+                                    [titleColor]="color"
+                                    [unitsColor]="color"
+                                    [radius]="60"
+                                    [space]="-10"
+                                    [outerStrokeWidth]="10"
+                                    [innerStrokeColor]="'#c0c7b8'"
+                                    [innerStrokeWidth]="10"
+                                    [animationDuration]="1000"
+                                    [showSubtitle]="false"
+                                    ></circle-progress>
+                                </div>
+                            <div class="p-center">
+                                <p class="fs-4 fw-semibold text-center text-white">{{nombre}}</p>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-primary btn-agregar">
+                            Agregar
+                        </button>
+                        <button class="btn btn-light btn-cancelar" (click)="cancel()">
+                            Cancelar
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</article>

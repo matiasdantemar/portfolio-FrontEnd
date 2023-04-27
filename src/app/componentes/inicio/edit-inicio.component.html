@@ -1,0 +1,79 @@
+<article>
+  <section>
+    <div class="overflow-auto container-fluid">
+      <div class="row contenido justify-content-center">
+        <div class="col-8 col-sm-8 col-xxl-9">
+          <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+            <div class="form-group">
+              <label class="form-label text-white" for="apellido">Apellido</label>
+              <input id="apellido" class="form-control input-nombre" type="text" name="apellido" required
+                [(ngModel)]="persona.apellido" />
+            </div>
+            <div class="form-group"><label class="form-label text-white" for="nombre">Nombre</label><input id="nombre"
+                class="form-control input-apellido" type="text" name="nombre" required [(ngModel)]="persona.nombre" />
+            </div>
+            <div class="form-group"><label class="form-label text-white input-descripcion"
+                for="descripcion">Descripcion</label><input id="descripcion" class="form-control" type="text"
+                name="descripcion" required [(ngModel)]="persona.descripcion" /></div>
+            <div class="form-group">
+              <label for="img" class="form-label text-white">Imagen de la Experiencia</label>
+              <br>
+              <h5 class="ingresa-modal bg-white p-1 d-inline-block" (click)="lgModal.show()">Seleccionar Archivo</h5>
+            </div>
+            <div class="form-group center">
+              <div class="imagen">
+                <img class="imagen-inicio" [src]="imageService.urlImg" alt="Previsualización de la Foto de perfil">
+              </div>
+            </div>
+            <button class="btn btn-primary btn-actualizar" type="submit">Actualizar</button>
+            <button class="btn btn-light btn-cancelar" (click)="cancel()">
+              Cancelar
+            </button>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</article>
+
+<div bsModal #lgModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="dialog-sizes-name1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content  text-white">
+      <div class="modal-header bg-secondary">
+        <input type="file" (change)="fileChangeEvent($event)" accept=".jpg, .jpeg, .png" />
+        <button type="button" class="btn-close close pull-right" (click)="lgModal.hide()" aria-label="Close">
+          <span aria-hidden="true" class="visually-hidden">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-12 mt-5 d-flex justify-content-center" *ngIf="imageChangedEvent">
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-outline-primary" (click)="rotate()"
+                [ngClass]="rotateStatus ? 'active' :''">Rotar</button>
+              <button type="button" class="btn btn-outline-primary" (click)="flipHorizontal()"
+                [ngClass]="flipHorizontalStatus ? 'active' :''">GirarX</button>
+              <button type="button" class="btn btn-outline-primary" (click)="flipVertical()"
+                [ngClass]="flipVerticalStatus ? 'active' :''">GirarY</button>
+              <button type="button" class="btn btn-outline-danger" (click)="discardChagnes()"
+                [ngClass]="discardChagnesStatus ? 'active' :''">Restaurar</button>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <image-cropper [imageChangedEvent]="imageChangedEvent" [maintainAspectRatio]="true" [aspectRatio]="4 / 4.57"
+            [resizeToWidth]="650"
+              format="png" (imageCropped)="imageCropped($event)" (imageLoaded)="imageLoaded()" [transform]="transform"
+              (cropperReady)="cropperReady()" (loadImageFailed)="loadImageFailed()"></image-cropper>
+          </div>
+          <div class="col-md-12 mt-5 d-flex justify-content-center">
+            <img [src]="croppedImage" class="img-fluid" *ngIf="imageChangedEvent" />
+          </div>
+          <div class="col-md-12 mt-5 d-flex justify-content-center">
+            <button type="button" class="btn btn-primary" (click)="uploadImage()">Crear imagen</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

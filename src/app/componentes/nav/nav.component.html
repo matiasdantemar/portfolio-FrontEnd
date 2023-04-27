@@ -1,6 +1,6 @@
 <header>
     <nav class="navbar navbar-dark navbar-expand-md">
-        <div class="container-fluid"><a class="navbar-brand" href="#"><img class="image-nav" src="../assets/img/logo-arg-programa.svg"></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        <div class="container-fluid"><a class="navbar-brand" href="#"><img class="image-nav" src="../assets/img/logo-arg-programa-768px.svg" alt="Logo de Argentina Programa"></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"></li>
@@ -9,9 +9,11 @@
                     <li class="nav-item"><a class="nav-link a-link" href="#" routerLink="/educacion" routerLinkActive="active">Educación</a></li>
                     <li class="nav-item"><a class="nav-link a-link" href="#" routerLink="/skills" routerLinkActive="active">Skills</a></li>
                     <li class="nav-item"><a class="nav-link a-link" href="#" routerLink="/proyectos" routerLinkActive="active">Proyectos</a></li>
-                    <li class="nav-item"><a class="nav-link a-link" href="#" routerLink="/login" routerLinkActive="active">Login</a></li>
+                    <button type="button" class="btn btn-outline-light" (click)="login()" *ngIf="!isLogged">Login</button>
+                    <button type="button" class="btn btn-outline-light" (click)="onLogOut()" *ngIf="isLogged">Salir</button>
                 </ul>
             </div>
         </div>
     </nav>
+
 </header>

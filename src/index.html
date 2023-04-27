@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>PortafolioApp</title>
@@ -8,20 +9,28 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
   <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600,800,900" rel="stylesheet" type="text/css">
-
 </head>
 <body>
   <div class="background">
     <div class="principal-card">
+      <app-root></app-root>
 
-        <app-root></app-root>
-        <p class="p-number-page">01</p><a href="#">
-            <p class="p-scroll">SCROLL<i class="fa fa-arrow-right svg-arrow"></i></p>
+
+    
+      <div>
+        <p class="p-number-page" id="numero"></p>
+        <a href="#" id="enlace">
+          <p class="p-scroll">SCROLL<i class="fa fa-arrow-right svg-arrow"></i></p>
         </a>
-        <div class="img-social"><img class="image-social" src="../assets/img/facebook.png"><img class="image-social" src="../assets/img/instagram.png"><img class="image-social" src="../assets/img/twitter.png"></div>
+      </div>
+      <div class="div-img-social">
+        <a href="https://www.facebook.com/matiasdantemar/" class="social-link" target="_blank"><img class="image-social" src="../assets/img/facebook.png" alt="Enlace externo a la red social de mi Facebook"></a>
+        <a href="https://www.linkedin.com/in/matias-dante-martinez-9bb520228/" class="social-link" target="_blank"><img class="image-social" src="../assets/img/linkedin.png" alt="Enlace externo a la red social de mi LinkedIn"></a>
+        <a href="mailto:martinezmatiasdante@gmail.com" class="social-link" target="_blank"><img class="image-social" src="../assets/img/correo.png" alt="Enviar un correo electronico"></a>
+      </div>
     </div>
-</div>
-
+  </div>
 
 </body>
+
 </html>

@@ -1,0 +1,90 @@
+article {
+    height: 85%;
+}
+
+section {
+    height: 100%;
+}
+
+.contenido {
+    height: 86vh;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+.input-nombre {
+    width: 50%;
+}
+
+.input-inicio,
+.input-fin,
+.input-imagen {
+    width: 70%;
+}
+
+.input-tipo {
+    width: 90%;
+}
+
+
+.btn-agregar,
+.btn-cancelar {
+    margin: 10px 10px 10px 0px;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imagen-experiencia {
+    width: 180px;
+    /*borrar linea si utilizo ngx-image-cropper*/
+    max-width: 180px;
+    max-height: 90px;
+    border-radius: 10px;
+}
+
+.ingresa-modal {
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .contenido {
+        height: 67vh;
+    }
+}
+
+@media (min-width: 768px) {
+    .center {
+        display: block;
+        flex-direction: inherit;
+        align-items: start;
+    }
+}
+
+@media (min-width: 992px) {
+    .imagen-experiencia {
+        max-height: 120px;
+    }
+}
+
+.overflow-auto::-webkit-scrollbar {
+    background-color: transparent;
+}
+
+.overflow-auto::-webkit-scrollbar-thumb {
+    background-color: #626262;
+    border-radius: 10px;
+}
+
+.overflow-auto::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555252;
+}

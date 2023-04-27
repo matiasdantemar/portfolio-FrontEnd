@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AlertComponent } from 'ngx-bootstrap/alert';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'portfolio-FrontEnd';
+  alerts: any[] = [{
+  }];
+ 
+  add(type:string, msg:string): void {
+    this.alerts.push({
+      type: type,
+      msg: msg,
+      timeout: 4000
+    });
+  }
+ 
+  onClosed(dismissedAlert: AlertComponent): void {
+    this.alerts = this.alerts.filter(alert => alert !== dismissedAlert);
+  }
 }
+

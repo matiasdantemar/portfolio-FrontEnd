@@ -1,14 +1,18 @@
 header {
     height: 15%;
-  }
-  
+}
+
 .image-nav {
-    width: 21vh;
-    margin-top: 15px;
+    width: 15vh;
+    margin: 15px 0px 0px 20px;
+}
+
+.navbar-collapse {
+    z-index: 1000;
 }
 
 @media (min-width: 768px) {
     .image-nav {
-    width: 13vh;    
+        width: 13vh;
     }
-}  
+}

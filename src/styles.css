@@ -58,6 +58,15 @@ header {
   margin-top: 15px;
 }
 
+.social-link {
+  filter: grayscale(100%);
+  transition: filter 0.5s ease;
+}
+
+.social-link:hover {
+  filter: grayscale(0%);
+}
+
 @media (min-width: 768px) {
   .image-nav {
     width: 13vh;
@@ -88,10 +97,17 @@ section {
   }
 }
 
+.div-img-social {
+  position: absolute;
+  bottom: 32%;
+  left: 5%;
+  text-decoration: underline;
+}
+
 .image-social {
   display: block;
   width: 25px;
-  margin: 12px 0px 29px 30px;
+  margin: 0px 0px 35px 0px;
 }
 
 .p-scroll {
@@ -143,14 +159,6 @@ section {
   }
 }
 
-.img-social {
-  position: absolute;
-  bottom: 32%;
-  left: 2%;
-  color: #ffffff;
-  font-size: 4em;
-  text-decoration: underline;
-}
 
 .overflow-auto::-webkit-scrollbar {
   background-color: transparent;

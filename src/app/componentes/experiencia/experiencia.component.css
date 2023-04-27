@@ -26,30 +26,41 @@ section {
   padding: 15px 51px 15px 0px;
 }
 
-.btn-edit {
+.btn-right {
   float: right;
 }
 
-.button-edit {
+.button-delete, .button-edit, .button-new{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px; /* ancho del icono */
+  height: 20px; /* alto del icono */
+  margin-left: 20px;
   border: none;
-  font-size: 20px;
+  cursor: pointer;
+  border: none;
   background: none;
-  /* display: none; */
 }
 
-.icon-edit {
-  width: 3vh;
+.icon-delete, .icon-edit, .icon-new {
+  font-size: 20px; /* tamaño de la fuente del icono */
   color: rgb(0,163,255);
+}
+
+.icon-edit:hover, .icon-delete:hover, .icon-new:hover {
+  color:#0077ff;
 }
 
 .div-image {
   text-align: center;
 }
 
-.image-experiencia {
-  max-width: 27vw;
-  border-radius: 10px 10px 10px 10px;
-  -moz-border-radius: 10px 10px 10px 10px;
+.imagen-experiencia {
+  width: 180px; /*borrar linea si utilizo ngx-image-cropper*/
+  max-width: 180px;
+  max-height: 90px;
+  border-radius: 10px;
 }
 
 .div-text {
@@ -68,21 +79,9 @@ section {
     text-align: initial;
   }
 
-  .image-experiencia {
-    float: left;
-    max-width: 13vw;
+  .imagen-experiencia {
+    float:left;
+    max-height: 120px;
+    max-width: 180px;
   }
-} 
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
+}

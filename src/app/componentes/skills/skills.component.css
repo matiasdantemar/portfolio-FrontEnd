@@ -12,34 +12,53 @@ section {
   align-items: center;
   padding: 0px 52px;
 }
-  
+
 .p-title {
   text-align: center;
   margin: 0 auto;
 }
 
-.button-edit {
+.btn-right {
+  float: right;
+}
+
+.button-delete,
+.button-edit,
+.button-new {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  /* ancho del icono */
+  height: 20px;
+  /* alto del icono */
+  margin-left: 20px;
   border: none;
-  font-size: 20px;
+  cursor: pointer;
+  border: none;
   background: none;
-  /* display: none; */
 }
 
-.icon-edit {
-  width: 3vh;
-  color: rgb(0,163,255);
+.icon-delete,
+.icon-edit,
+.icon-new {
+  font-size: 20px;
+  /* tamaño de la fuente del icono */
+  color: rgb(0, 163, 255);
 }
 
-.contenido3{
+.icon-edit:hover,
+.icon-delete:hover,
+.icon-new:hover {
+  color: #0077ff;
+}
+
+.contenido3 {
   height: 63vh;
 }
-  
+
 .col-card {
   padding: 15px 51px 15px 0px;
-}
-
-.btn-edit {
-  float: right;
 }
 
 .div-container {
@@ -49,12 +68,10 @@ section {
   margin: 24px auto;
 }
 
+
 @media (min-width: 1200px) {
   .col-skill {
     margin-right: 51.5px;
     padding: initial;
   }
 }
-
-
-      

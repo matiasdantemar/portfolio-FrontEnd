@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { PortfolioService } from 'src/app/servicios/portfolio.service';
+import { persona } from 'src/app/model/persona.model';
+import { PersonaService } from 'src/app/servicios/persona.service';
+import { TokenService } from 'src/app/servicios/token.service';
+
 
 @Component({
   selector: 'app-inicio',
@@ -7,14 +10,38 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
   styleUrls: ['./inicio.component.css']
 })
 export class InicioComponent implements OnInit {
-  miPorfolio:any;
-  constructor(private datosPorfolio:PortfolioService){}
+  numero: string = "01";
+  persona: persona = null;
 
-  ngOnInit():void{
-    this.datosPorfolio.obtenerDatos().subscribe(data=>{
-      console.log(data);
-      this.miPorfolio=data[0];
-    });
+  constructor(public personaService: PersonaService, private tokenService: TokenService) { }
+  isLogged = false;
+  ngOnInit(): void {
+
+
+    this.cargarPersona();
+    if (this.tokenService.getToken()) {
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
+    }
+    const pElement = document.getElementById('numero');
+    pElement.innerHTML = this.numero.toString();
+    const miEnlace = document.getElementById("enlace") as HTMLAnchorElement;
+    miEnlace.setAttribute("href", "http://localhost:4200/experiencia");
+  }
+
+  cargarPersona() { //carga la información de la persona de la base de datos
+    this.personaService.detail(1).subscribe( //utiliza el servicio "PersonaService" para cargar la persona con id = 1
+      data => {
+        this.persona = data;
+      }
+    )
+  }
+
+  getNumero(): string {
+    let numero = "01";
+    return numero;
   }
 }
+
 

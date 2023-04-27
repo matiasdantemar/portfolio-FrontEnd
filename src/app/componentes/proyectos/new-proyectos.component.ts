@@ -23,6 +23,8 @@ export class NewProyectosComponent {
     this.color = '#3d685f'
     const pElement = document.getElementById('numero');
     pElement.innerHTML = this.numero.toString();
+    const miEnlace = document.getElementById("enlace") as HTMLAnchorElement;
+    miEnlace.setAttribute("href", "https://matias-portafolio.onrender.com/loginw");
   }
 
   onCreate(): void {

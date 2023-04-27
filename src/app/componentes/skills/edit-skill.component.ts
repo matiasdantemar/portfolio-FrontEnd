@@ -29,7 +29,7 @@ export class EditSkillComponent implements OnInit {
     const pElement = document.getElementById('numero');
     pElement.innerHTML = this.numero.toString();
     const miEnlace = document.getElementById("enlace") as HTMLAnchorElement;
-    miEnlace.setAttribute("href", "http://localhost:4200/proyectos");
+    miEnlace.setAttribute("href", "https://matias-portafolio.web.app/proyectos");
   }
 
   onUpdate() {

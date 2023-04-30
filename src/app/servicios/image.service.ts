@@ -35,7 +35,7 @@ export class ImageService {
         if(this.nombre==item.name){
           this.urlImg=this.url;
         }
-        console.log("La URL es: " + this.url);
+
       }
     })
     

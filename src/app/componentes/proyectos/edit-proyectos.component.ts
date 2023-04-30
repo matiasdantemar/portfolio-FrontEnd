@@ -22,10 +22,11 @@ export class EditProyectosComponent {
       }, err =>{
         this.appComponent.add('danger', 'Error al modificar proyecto');
         this.router.navigate(['/proyectos']);
-        const miEnlace = document.getElementById("enlace") as HTMLAnchorElement;
-        miEnlace.setAttribute("href", "https://matias-portafolio.web.app/login");
+
       }
     )
+    const miEnlace = document.getElementById("enlace") as HTMLAnchorElement;
+    miEnlace.setAttribute("href", "https://matias-martinez.web.app/inicio");
     const pElement = document.getElementById('numero');
     pElement.innerHTML = this.numero.toString();
   }

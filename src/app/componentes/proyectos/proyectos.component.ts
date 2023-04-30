@@ -24,10 +24,10 @@ export class ProyectosComponent implements OnInit {
     const miEnlace = document.getElementById("enlace") as HTMLAnchorElement;
     if (this.tokenService.getToken()) {
       this.isLogged = true;
-      miEnlace.setAttribute("href", "https://matias-portafolio.web.app/inicio");
+      miEnlace.setAttribute("href", "https://matias-martinez.web.app/inicio");
     } else {
       this.isLogged = false;
-      miEnlace.setAttribute("href", "https://matias-portafolio.web.app/login");
+      miEnlace.setAttribute("href", "https://matias-martinez.web.app/login");
     }
     const pElement = document.getElementById('numero');
     pElement.innerHTML = this.numero.toString();

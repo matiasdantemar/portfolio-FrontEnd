@@ -1,13 +1,13 @@
 export const environment = {
   firebase: {
-    projectId: 'matias-portfolio',
-    appId: '1:267428264730:web:a67e28b74d547b4fe34aa3',
-    storageBucket: 'matias-portfolio.appspot.com',
+    projectId: 'matias-martinez',
+    appId: '1:80677209784:web:ffdcf46e7f8c147707964d',
+    storageBucket: 'matias-martinez.appspot.com',
     locationId: 'southamerica-east1',
-    apiKey: 'AIzaSyDxmN90viZgb2ouU222T19kQHCb6BoldFk',
-    authDomain: 'matias-portfolio.firebaseapp.com',
-    messagingSenderId: '267428264730',
+    apiKey: 'AIzaSyBnB9hYhxxN6d1THUX_xkv1ZNW7Liz0t7I',
+    authDomain: 'matias-martinez.firebaseapp.com',
+    messagingSenderId: '80677209784',
   },
     production: false,
-    URL: 'https://matias-portafolio.onrender.com/'
+    URL: 'https://matias-martinez.onrender.com/'
 };

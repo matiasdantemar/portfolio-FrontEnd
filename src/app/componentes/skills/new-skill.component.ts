@@ -22,7 +22,7 @@ export class NewSKillComponent implements OnInit{
     const pElement = document.getElementById('numero');
     pElement.innerHTML = this.numero.toString();
     const miEnlace = document.getElementById("enlace") as HTMLAnchorElement;
-    miEnlace.setAttribute("href", "https://matias-portafolio.web.app/proyectos");
+    miEnlace.setAttribute("href", "https://matias-martinez.web.app/proyectos");
   }
 
   onCreate(): void{
